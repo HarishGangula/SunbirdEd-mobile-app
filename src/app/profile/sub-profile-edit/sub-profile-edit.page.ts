@@ -169,7 +169,7 @@ export class SubProfileEditPage {
         userDetails.framework.subject = [];
       }
       if (locationCodes && locationCodes.length) {
-        userDetails.locationCodes =  locationCodes;
+        //userDetails.locationCodes =  locationCodes;
       }
       const response = await this.profileService.managedProfileManager.addManagedProfile(userDetails).toPromise();
       if (response) {
