@@ -31,8 +31,9 @@
       "@project-sunbird/common-consumption": ["../node_modules/@project-sunbird/common-consumption-v8"],
       "@project-sunbird/common-consumption/*": ["../node_modules/@project-sunbird/common-consumption-v8/*"],
       "common-form-elements": ["../node_modules/common-form-elements-v8"],
-      "common-form-elements/*": ["../node_modules/common-form-elements-v8/*"]
-
+      "common-form-elements/*": ["../node_modules/common-form-elements-v8/*"],
+      "crypto": ["../../node_modules/crypto-js"]
+      
     }
   },
   "include": [

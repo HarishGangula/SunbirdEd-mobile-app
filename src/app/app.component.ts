@@ -79,6 +79,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   eventSubscription: Subscription;
   isTimeAvailable = false;
   isOnBoardingCompleted: boolean;
+  tagManagerInstance:any;
 
   constructor(
     @Inject('TELEMETRY_SERVICE') private telemetryService: TelemetryService,
@@ -120,6 +121,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.platform.ready().then(async () => {
+      console.log("Sharath");
       this.formAndFrameworkUtilService.init();
       this.networkAvailability.init();
       this.fcmTokenWatcher(); // Notification related
@@ -162,8 +164,8 @@ export class AppComponent implements OnInit, AfterViewInit {
       await this.checkForTheme();
       this.onTraceIdUpdate();
       await this.applyJoyfulTheme();
-      window['SBTagManager'] = SBTagModule.instance;
-      window['SBTagManager'].init();
+      this.tagManagerInstance = SBTagModule.instance;
+      this.tagManagerInstance.init();
     });
 
     this.headerService.headerConfigEmitted$.subscribe(config => {
