@@ -46,8 +46,7 @@ import {
 } from './app.constant';
 import { EventParams } from './components/sign-in-card/event-params.interface';
 import { SBTagModule } from 'sb-tag-manager';
-import { SegmentationTagService, TagPrefixConstants } from '@app/services/segmentation-tag/segmentation-tag.service';
-
+import { SegmentationTagService } from '@app/services/segmentation-tag/segmentation-tag.service';
 declare const cordova;
 
 @Component({
